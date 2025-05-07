@@ -1,4 +1,4 @@
-# signature pharmacy
+# Tether Task
 ## Setup
 install: <br/>
 ````
@@ -6,24 +6,22 @@ npm install
 ````
 configure: <br/>
 ````
-fill all environment variables to .env file
+run bootstrap on local
 ````
-Create database: <br/>
+npx hyperdht --bootstrap --host 127.0.0.1 --port 30001
 ````
-node_modules\.bin\sequelize db:create
+
+
 ````
-running migrations: <br/>
+ node scripts/rpc/server.js
 ````
-node_modules\.bin\sequelize db:migrate
+
 ````
-## Starting app
-default mode
+npx hyperdht --bootstrap --host 127.0.0.1 --port 30001
 ````
-npm run start
+
 ````
-development mode with watcher
-````
-npm run dev
+node cron.js
 ````
 
 ##Migrations 
